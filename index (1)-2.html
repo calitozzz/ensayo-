@@ -425,6 +425,62 @@
             .escaleta, .qr-section { padding: 24px 20px; }
             .qr-box img { width: 180px; height: 180px; }
         }
+        /* ---------- Sección Video de YouTube ---------- */
+        .video-section {
+            margin-top: 35px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0,90,156,0.12);
+            padding: 30px;
+            text-align: center;
+            border-top: 4px solid #0078d4;
+        }
+
+        .video-section h2 {
+            color: #004080;
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin: 0 0 8px;
+        }
+
+        .video-section p {
+            color: #5a7a99;
+            margin: 0 0 20px;
+            font-size: 0.98rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 640px;
+            margin: 0 auto 20px;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0, 64, 128, 0.14);
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .youtube-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #005a9c, #0078d4);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 11px 22px;
+            border-radius: 999px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .youtube-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 120, 212, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -605,6 +661,24 @@
             <div class="qr-box">
                 <img src="images/qr.png" alt="Código QR del material audiovisual del proyecto" />
             </div>
+        </section>
+        <!-- Video de YouTube -->
+        <section class="video-section">
+            <h2>Cortometraje / Video del Proyecto</h2>
+            <p>Mira nuestro video completo sobre las problemáticas del plantel y nuestras propuestas</p>
+
+            <div class="video-wrapper">
+                <iframe
+                    src="https://youtu.be/TWciIE2rmns?si=WApdKD-ekg0aNAMf"
+                    title="Video del proyecto escolar en YouTube"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <a class="youtube-btn" href="https://youtu.be/TWciIE2rmns?si=WApdKD-ekg0aNAMf" target="_blank" rel="noopener noreferrer">
+                Ver enlace directo en YouTube
+            </a>
         </section>
 
         <div class="intro">
