@@ -6,43 +6,70 @@
     <title>Edición 01 · Falta de Techado en la Cancha · Casa Editorial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet" />
     <style>
+        :root {
+            --bg-dark: #0b0716;
+            --bg-card: #150e28;
+            --bg-card-soft: #1d1336;
+            --neon-pink: #ff4da6;
+            --neon-coral: #ff7a59;
+            --neon-cyan: #2de2e6;
+            --neon-purple: #9b5de5;
+            --sun-gold: #ffd166;
+            --text-main: #f5f2ff;
+            --text-muted: #b8aed6;
+            --border-glow: rgba(255, 77, 166, 0.28);
+        }
+
         * {
             box-sizing: border-box;
         }
 
         body {
-            font-family: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+            font-family: 'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif;
             margin: 0;
-            background: linear-gradient(180deg, #eaf4fb 0%, #f9f9f9 40%);
-            color: #333;
+            background:
+                radial-gradient(circle at 15% 10%, rgba(255, 77, 166, 0.22), transparent 35%),
+                radial-gradient(circle at 85% 18%, rgba(45, 226, 230, 0.18), transparent 38%),
+                linear-gradient(180deg, #120924 0%, #0b0716 45%, #080511 100%);
+            color: var(--text-main);
             line-height: 1.65;
             -webkit-font-smoothing: antialiased;
         }
 
         h1, h2, h3 {
-            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            font-family: 'Anton', Impact, 'Arial Narrow', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        /* ---------- Encabezado con imagen ---------- */
+        /* ---------- Encabezado estilo Atardecer Vice ---------- */
         .hero {
             position: relative;
-            height: 320px;
+            height: 340px;
             overflow: hidden;
+            border-bottom: 3px solid var(--neon-pink);
+            box-shadow: 0 10px 35px rgba(255, 77, 166, 0.25);
         }
 
         .hero img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            filter: saturate(1.25) contrast(1.08) brightness(0.82);
         }
 
         .hero::after {
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(0,64,128,0.28) 0%, rgba(0,64,128,0.78) 100%);
+            background: linear-gradient(
+                180deg,
+                rgba(45, 226, 230, 0.14) 0%,
+                rgba(155, 93, 229, 0.42) 45%,
+                rgba(11, 7, 22, 0.92) 100%
+            );
         }
 
         .hero-text {
@@ -60,52 +87,62 @@
 
         .hero-text h1 {
             margin: 0;
-            font-size: 2.5rem;
-            font-weight: 800;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-            letter-spacing: 0.5px;
+            font-size: 2.9rem;
+            font-weight: 400;
+            line-height: 1.05;
+            background: linear-gradient(90deg, #ffd166 0%, #ff7a59 42%, #ff4da6 75%, #2de2e6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.75));
         }
 
         .hero-text p {
-            margin: 10px 0 0;
-            font-size: 1.12rem;
+            margin: 12px 0 0;
+            font-size: 1.05rem;
             font-style: italic;
+            color: #f3ecff;
             max-width: 720px;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
         }
 
         .hero-badge {
-            background: #ffd54f;
-            color: #7a5c00;
-            font-weight: bold;
-            font-size: 0.85rem;
-            padding: 4px 14px;
-            border-radius: 999px;
+            background: linear-gradient(90deg, var(--neon-pink), var(--neon-coral));
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            font-size: 0.78rem;
+            padding: 5px 16px;
+            border-radius: 4px;
             margin-bottom: 12px;
             letter-spacing: 2px;
             text-transform: uppercase;
+            box-shadow: 0 0 18px rgba(255, 77, 166, 0.55);
         }
 
         /* ---------- Contenedor principal ---------- */
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: auto;
-            padding: 40px 25px 60px;
+            padding: 42px 25px 60px;
         }
 
         /* ---------- Portada del equipo ---------- */
         .portada-equipo {
             display: flex;
             justify-content: center;
-            padding: 0 16px 40px;
+            padding: 0 12px 42px;
         }
 
         .portada-equipo img {
             width: 100%;
             max-width: 520px;
             height: auto;
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0, 64, 128, 0.18);
+            border-radius: 16px;
+            border: 2px solid rgba(45, 226, 230, 0.45);
+            box-shadow:
+                0 12px 32px rgba(0, 0, 0, 0.6),
+                0 0 24px rgba(255, 77, 166, 0.22);
         }
 
         /* ---------- Equipo editorial ---------- */
@@ -115,16 +152,15 @@
         }
 
         .team h2 {
-            color: #004080;
-            font-size: 1.7rem;
-            font-weight: 700;
+            color: var(--sun-gold);
+            font-size: 1.95rem;
+            font-weight: 400;
             margin: 0 0 6px;
-            letter-spacing: 0.5px;
         }
 
         .team .team-sub {
             margin: 0 0 28px;
-            color: #5a7a99;
+            color: var(--text-muted);
             font-style: italic;
         }
 
@@ -136,75 +172,82 @@
         }
 
         .member {
-            background: #fff;
+            background: var(--bg-card);
             border-radius: 14px;
-            box-shadow: 0 4px 16px rgba(0,90,156,0.12);
+            border: 1px solid var(--border-glow);
+            border-top: 4px solid var(--neon-cyan);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
             padding: 24px 22px;
-            border-top: 4px solid #ffd54f;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
         }
 
         .member:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 28px rgba(0,90,156,0.22);
+            border-top-color: var(--neon-pink);
+            box-shadow: 0 12px 28px rgba(255, 77, 166, 0.22);
         }
 
         .member .avatar {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #005a9c, #0078d4);
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
             color: #fff;
-            font-weight: bold;
-            font-size: 1.1rem;
+            font-weight: 800;
+            font-size: 1.05rem;
             margin-bottom: 12px;
+            box-shadow: 0 4px 14px rgba(255, 77, 166, 0.35);
         }
 
         .member h3 {
             margin: 0 0 4px;
-            color: #004080;
-            font-size: 1.05rem;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 400;
         }
 
         .member .rol {
             display: block;
-            color: #0078d4;
-            font-weight: bold;
-            font-size: 0.85rem;
+            color: var(--neon-cyan);
+            font-weight: 800;
+            font-size: 0.78rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
             margin-bottom: 12px;
         }
 
         .member p {
             margin: 0 0 10px;
             font-size: 0.92rem;
+            color: #e4ddf7;
         }
 
         .member .aporte {
             margin-top: 12px;
             padding: 10px 14px;
-            background: #f0f9f1;
-            border-left: 4px solid #4caf50;
+            background: rgba(45, 226, 230, 0.08);
+            border-left: 3px solid var(--neon-cyan);
             border-radius: 0 8px 8px 0;
             font-size: 0.88rem;
+            color: #e9fafa;
         }
 
         .member .aporte strong {
-            color: #2e7d32;
+            color: var(--neon-cyan);
         }
 
         /* ---------- Sección Única: Falta de Techado en la Cancha ---------- */
         .topic-section {
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 4px 16px rgba(0,90,156,0.12);
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-glow);
+            border-top: 4px solid var(--neon-pink);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
             overflow: hidden;
             margin-bottom: 40px;
-            border-top: 4px solid #0078d4;
         }
 
         .topic-header {
@@ -215,9 +258,10 @@
         .topic-header img {
             width: 100%;
             max-width: 340px;
-            height: 235px;
+            height: 240px;
             object-fit: cover;
             flex-shrink: 0;
+            filter: saturate(1.2) contrast(1.05);
         }
 
         .topic-intro {
@@ -228,27 +272,30 @@
 
         .topic-tag {
             display: inline-block;
-            background: #eaf4fb;
-            color: #004080;
-            font-weight: 700;
-            font-size: 0.78rem;
+            background: rgba(255, 209, 102, 0.14);
+            color: var(--sun-gold);
+            border: 1px solid rgba(255, 209, 102, 0.4);
+            font-weight: 800;
+            font-size: 0.74rem;
             text-transform: uppercase;
             letter-spacing: 1.2px;
             padding: 4px 12px;
-            border-radius: 999px;
+            border-radius: 4px;
             margin-bottom: 10px;
         }
 
         .topic-intro h2 {
-            color: #004080;
+            color: #fff;
             margin: 0 0 12px;
-            font-size: 1.45rem;
-            line-height: 1.3;
+            font-size: 1.65rem;
+            font-weight: 400;
+            line-height: 1.15;
         }
 
         .topic-intro p {
             margin: 0;
-            font-size: 0.98rem;
+            font-size: 0.97rem;
+            color: #e4ddf7;
         }
 
         .topic-body {
@@ -263,145 +310,111 @@
         }
 
         .point-card {
-            background: #f8fbfe;
-            border: 1px solid #e1effa;
-            border-radius: 10px;
+            background: var(--bg-card-soft);
+            border: 1px solid rgba(155, 93, 229, 0.3);
+            border-radius: 12px;
             padding: 16px 18px;
         }
 
         .point-card h3 {
             margin: 0 0 6px;
-            color: #005a9c;
-            font-size: 1rem;
+            color: var(--neon-coral);
+            font-size: 1.12rem;
+            font-weight: 400;
         }
 
         .point-card p {
             margin: 0;
-            font-size: 0.93rem;
-            color: #444;
+            font-size: 0.92rem;
+            color: var(--text-muted);
         }
 
         .solution {
             margin-top: 22px;
-            padding: 14px 18px;
-            background: #f0f9f1;
-            border-left: 4px solid #4caf50;
-            border-radius: 0 8px 8px 0;
+            padding: 15px 18px;
+            background: rgba(45, 226, 230, 0.1);
+            border-left: 4px solid var(--neon-cyan);
+            border-radius: 0 10px 10px 0;
             font-size: 0.96rem;
+            color: #f0ffff;
         }
 
         .solution strong {
-            color: #2e7d32;
+            color: var(--neon-cyan);
         }
 
         /* ---------- Mapa semántico ---------- */
         .mapa {
             margin-top: 35px;
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 4px 16px rgba(0,90,156,0.12);
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-glow);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
             padding: 30px;
             text-align: center;
         }
 
         .mapa h2 {
-            color: #004080;
-            font-size: 1.5rem;
-            font-weight: 700;
+            color: var(--sun-gold);
+            font-size: 1.75rem;
+            font-weight: 400;
             margin: 0 0 20px;
         }
 
         .mapa img {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
-        /* ---------- Escaleta y créditos ---------- */
-        .escaleta {
+        /* ---------- Escaleta (solo imagen) ---------- */
+        .escaleta-img {
             margin-top: 35px;
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 4px 16px rgba(0,90,156,0.12);
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-glow);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
             padding: 30px;
-        }
-
-        .escaleta > h2 {
-            color: #004080;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 0 24px;
             text-align: center;
         }
 
-        .escaleta-item {
-            padding: 0 0 18px 18px;
-            margin-bottom: 18px;
-            border-left: 4px solid #0078d4;
+        .escaleta-img h2 {
+            color: var(--neon-pink);
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin: 0 0 20px;
         }
 
-        .escaleta-item:last-of-type {
-            margin-bottom: 0;
-        }
-
-        .escaleta-item h3 {
-            color: #004080;
-            font-size: 1.05rem;
-            margin: 0 0 6px;
-        }
-
-        .escaleta-item h3 span {
-            color: #0078d4;
-            font-family: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-
-        .escaleta-item p {
-            margin: 0;
-        }
-
-        .roles {
-            margin-top: 28px;
-            padding: 20px 22px;
-            background: #f0f9f1;
-            border-left: 4px solid #4caf50;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .roles p {
-            margin: 0 0 8px;
-        }
-
-        .roles p:last-child {
-            margin-bottom: 0;
-        }
-
-        .roles strong {
-            color: #2e7d32;
+        .escaleta-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         /* ---------- Sección Código QR del Ensayo ---------- */
         .qr-section {
             margin-top: 35px;
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 4px 16px rgba(0,90,156,0.12);
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-glow);
+            border-top: 4px solid var(--neon-cyan);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
             padding: 30px;
             text-align: center;
-            border-top: 4px solid #0078d4;
         }
 
         .qr-section h2 {
-            color: #004080;
-            font-size: 1.45rem;
-            font-weight: 700;
+            color: #fff;
+            font-size: 1.7rem;
+            font-weight: 400;
             margin: 0 0 8px;
         }
 
         .qr-section p {
-            color: #5a7a99;
-            margin: 0 0 20px;
+            color: var(--text-muted);
+            margin: 0 0 22px;
             font-size: 0.98rem;
         }
 
@@ -409,9 +422,9 @@
             display: inline-block;
             padding: 14px;
             background: #fff;
-            border: 2px solid #eaf4fb;
+            border: 3px solid var(--neon-cyan);
             border-radius: 14px;
-            box-shadow: 0 4px 14px rgba(0, 64, 128, 0.08);
+            box-shadow: 0 0 24px rgba(45, 226, 230, 0.28);
         }
 
         .qr-box img {
@@ -425,23 +438,24 @@
         /* ---------- Sección Video de YouTube del Tema ---------- */
         .video-section {
             margin-top: 35px;
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 4px 16px rgba(0,90,156,0.12);
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-glow);
+            border-top: 4px solid var(--neon-pink);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
             padding: 30px;
             text-align: center;
-            border-top: 4px solid #0078d4;
         }
 
         .video-section h2 {
-            color: #004080;
-            font-size: 1.45rem;
-            font-weight: 700;
+            color: #fff;
+            font-size: 1.7rem;
+            font-weight: 400;
             margin: 0 0 8px;
         }
 
         .video-section p {
-            color: #5a7a99;
+            color: var(--text-muted);
             margin: 0 0 20px;
             font-size: 0.98rem;
         }
@@ -450,11 +464,12 @@
             position: relative;
             width: 100%;
             max-width: 640px;
-            margin: 0 auto 20px;
+            margin: 0 auto 22px;
             aspect-ratio: 16 / 9;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0, 64, 128, 0.14);
+            border: 2px solid rgba(255, 77, 166, 0.45);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
         }
 
         .video-wrapper iframe {
@@ -465,29 +480,34 @@
 
         .youtube-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #005a9c, #0078d4);
+            background: linear-gradient(90deg, var(--neon-pink), var(--neon-coral));
             color: #fff;
             text-decoration: none;
-            font-weight: 600;
-            padding: 11px 22px;
-            border-radius: 999px;
+            font-weight: 800;
+            font-size: 0.92rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 12px 24px;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(255, 77, 166, 0.35);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .youtube-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 120, 212, 0.3);
+            box-shadow: 0 8px 24px rgba(255, 122, 89, 0.5);
         }
 
         /* ---------- Cita editorial ---------- */
         .intro {
             margin-top: 40px;
-            background: linear-gradient(135deg, #005a9c, #0078d4);
+            background: linear-gradient(120deg, rgba(255, 77, 166, 0.22), rgba(155, 93, 229, 0.25), rgba(45, 226, 230, 0.18));
+            border: 1px solid rgba(255, 209, 102, 0.35);
             color: #fff;
             padding: 30px 35px;
-            border-radius: 14px;
+            border-radius: 16px;
             font-style: italic;
-            box-shadow: 0 6px 20px rgba(0,90,156,0.3);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
         }
 
         .intro p {
@@ -497,25 +517,26 @@
         /* ---------- Pie de página ---------- */
         footer {
             text-align: center;
-            padding: 20px;
-            background: #004080;
-            color: #cfe6ff;
+            padding: 22px;
+            background: #070410;
+            border-top: 2px solid var(--neon-pink);
+            color: var(--text-muted);
             font-size: 0.9rem;
         }
 
         /* ---------- Responsivo ---------- */
         @media (max-width: 640px) {
-            .hero { height: 240px; }
-            .hero-text h1 { font-size: 1.75rem; }
-            .topic-header img { max-width: 100%; height: 190px; }
-            .topic-intro, .topic-body, .escaleta, .qr-section, .video-section { padding: 22px 20px; }
+            .hero { height: 260px; }
+            .hero-text h1 { font-size: 2rem; }
+            .topic-header img { max-width: 100%; height: 195px; }
+            .topic-intro, .topic-body, .mapa, .escaleta-img, .qr-section, .video-section { padding: 22px 20px; }
             .qr-box img { width: 180px; height: 180px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Encabezado editorial -->
+    <!-- Encabezado editorial estilo GTA VI -->
     <header class="hero">
         <img src="images/hero.jpg" alt="Patio y cancha del bachillerato con estudiantes" />
         <div class="hero-text">
@@ -539,40 +560,40 @@
             <div class="team-grid">
 
                 <div class="member">
-                    <span class="avatar">1</span>
-                    <h3>Integrante 1</h3>
+                    <span class="avatar">01</span>
+                    <h3>Camila Ivania Herrera Rosales</h3>
                     <span class="rol">Identidad Editorial</span>
                     <p><strong>Responsabilidad:</strong> Digitalización del logotipo oficial, definición de la estética visual y redacción del lema de la casa editorial.</p>
                     <div class="aporte"><strong>Aporte clave:</strong> Aportó personalidad, coherencia visual y una identidad sólida a la publicación.</div>
                 </div>
 
                 <div class="member">
-                    <span class="avatar">2</span>
-                    <h3>Integrante 2</h3>
+                    <span class="avatar">02</span>
+                    <h3>Carlos García Cruz</h3>
                     <span class="rol">Redacción y Ensayo Académico</span>
                     <p><strong>Responsabilidad:</strong> Elaboración del ensayo sobre la falta de techado y altas temperaturas en la cancha, con sustento documental y formato APA.</p>
                     <div class="aporte"><strong>Aporte clave:</strong> Dio rigor argumentativo y claridad a la postura central del primer tema.</div>
                 </div>
 
                 <div class="member">
-                    <span class="avatar">3</span>
-                    <h3>Integrante 3</h3>
+                    <span class="avatar">03</span>
+                    <h3>Eduardo Tototzintle Nieto</h3>
                     <span class="rol">Diseño de Información y Mapa Semántico</span>
                     <p><strong>Responsabilidad:</strong> Conceptualización, estructura y elaboración gráfica del mapa semántico vinculado al tema de la cancha y sus soluciones.</p>
                     <div class="aporte"><strong>Aporte clave:</strong> Organizó las ideas principales en un recurso visual directo y fácil de consultar.</div>
                 </div>
 
                 <div class="member">
-                    <span class="avatar">4</span>
-                    <h3>Integrante 4</h3>
+                    <span class="avatar">04</span>
+                    <h3>Santiago Rodriguez Hernandez</h3>
                     <span class="rol">Guion y Producción Audiovisual</span>
                     <p><strong>Responsabilidad:</strong> Planificación audiovisual, escaleta y asignación de créditos para el video del tema.</p>
                     <div class="aporte"><strong>Aporte clave:</strong> Estructuró el mensaje audiovisual para comunicar el problema de forma cercana y clara.</div>
                 </div>
 
                 <div class="member">
-                    <span class="avatar">5</span>
-                    <h3>Integrante 5</h3>
+                    <span class="avatar">05</span>
+                    <h3>Santiago Varillas Silva</h3>
                     <span class="rol">Maquetación y Edición Web</span>
                     <p><strong>Responsabilidad:</strong> Diseño de la página editorial, integración del ensayo vía QR, video de YouTube y navegación responsiva.</p>
                     <div class="aporte"><strong>Aporte clave:</strong> Reunió los contenidos escritos, gráficos y audiovisuales en una edición web funcional.</div>
@@ -627,38 +648,11 @@
             <img src="images/mapa.png" alt="Mapa semántico del proyecto editorial sobre la cancha y soluciones" />
         </div>
 
-        <!-- Escaleta audiovisual y créditos -->
-        <section class="escaleta">
-            <h2>Escaleta audiovisual del tema</h2>
-
-            <div class="escaleta-item">
-                <h3>Introducción <span>0:00-0:45</span></h3>
-                <p>Presentación del tema editorial y del contexto de la cancha del bachillerato ante la falta de techado.</p>
-            </div>
-
-            <div class="escaleta-item">
-                <h3>Exposición solar y calor en la cancha <span>0:45-2:15</span></h3>
-                <p>Análisis de cómo las altas temperaturas y el sol directo afectan las actividades físicas, recreativas y el bienestar estudiantil.</p>
-            </div>
-
-            <div class="escaleta-item">
-                <h3>Repercusiones en el rendimiento y la salud <span>2:15-3:45</span></h3>
-                <p>Relación entre el desgaste térmico, la fatiga o dolor de cabeza y la dificultad para mantener la atención escolar.</p>
-            </div>
-
-            <div class="escaleta-item">
-                <h3>Propuestas y cierre editorial <span>3:45-5:00</span></h3>
-                <p>Planteamiento de soluciones de infraestructura, sombra e hidratación, junto con la participación de la comunidad escolar.</p>
-            </div>
-
-            <div class="roles">
-                <p><strong>Carlos García Cruz:</strong> Narrador y coordinador general</p>
-                <p><strong>Camila Ivania Herrera Rosales:</strong> Investigadora de soluciones ambientales y sombra</p>
-                <p><strong>Eduardo Tototzintle Nieto:</strong> Investigación y apoyo documental</p>
-                <p><strong>Santiago Rodríguez Hernández:</strong> Investigación y gestión de infraestructura</p>
-                <p><strong>Santiago Varillas Silva:</strong> Investigación y organización de espacios escolares</p>
-            </div>
-        </section>
+        <!-- Escaleta (solo imagen) -->
+        <div class="escaleta-img">
+            <h2>Escaleta audiovisual</h2>
+            <img src="images/escaleta.jpg" alt="Escaleta audiovisual del tema sobre la falta de techado en la cancha" />
+        </div>
 
         <!-- Código QR del Ensayo -->
         <section class="qr-section">
