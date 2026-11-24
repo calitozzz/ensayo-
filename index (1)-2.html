@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Problemas del Plantel Escolar</title>
+    <title>Edición 01 · Falta de Techado en la Cancha · Casa Editorial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
@@ -42,7 +42,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(0,64,128,0.25) 0%, rgba(0,64,128,0.75) 100%);
+            background: linear-gradient(180deg, rgba(0,64,128,0.28) 0%, rgba(0,64,128,0.78) 100%);
         }
 
         .hero-text {
@@ -60,7 +60,7 @@
 
         .hero-text h1 {
             margin: 0;
-            font-size: 2.6rem;
+            font-size: 2.5rem;
             font-weight: 800;
             text-shadow: 0 2px 8px rgba(0,0,0,0.4);
             letter-spacing: 0.5px;
@@ -68,8 +68,9 @@
 
         .hero-text p {
             margin: 10px 0 0;
-            font-size: 1.15rem;
+            font-size: 1.12rem;
             font-style: italic;
+            max-width: 720px;
             text-shadow: 0 1px 4px rgba(0,0,0,0.4);
         }
 
@@ -92,80 +93,24 @@
             padding: 40px 25px 60px;
         }
 
-        /* ---------- Tarjetas de problema ---------- */
-        .problem {
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 4px 16px rgba(0,90,156,0.12);
-            margin-bottom: 35px;
-            overflow: hidden;
+        /* ---------- Portada del equipo ---------- */
+        .portada-equipo {
             display: flex;
-            flex-wrap: wrap;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .problem:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 28px rgba(0,90,156,0.22);
-        }
-
-        .problem:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .problem img {
-            width: 100%;
-            max-width: 320px;
-            height: 220px;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        .problem-content {
-            flex: 1;
-            min-width: 260px;
-            padding: 25px 30px;
-        }
-
-        .problem h2 {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: #004080;
-            margin: 0 0 12px;
-            font-size: 1.3rem;
-            line-height: 1.35;
-        }
-
-        .num {
-            display: inline-flex;
-            align-items: center;
             justify-content: center;
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #005a9c, #0078d4);
-            color: #fff;
-            font-size: 1rem;
-            flex-shrink: 0;
+            padding: 0 16px 40px;
         }
 
-        .solution {
-            margin-top: 15px;
-            padding: 12px 16px;
-            background: #f0f9f1;
-            border-left: 4px solid #4caf50;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.95rem;
+        .portada-equipo img {
+            width: 100%;
+            max-width: 520px;
+            height: auto;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 64, 128, 0.18);
         }
 
-        .solution strong {
-            color: #2e7d32;
-        }
-
-        /* ---------- Equipo de producción ---------- */
+        /* ---------- Equipo editorial ---------- */
         .team {
-            margin-bottom: 55px;
+            margin-bottom: 50px;
             text-align: center;
         }
 
@@ -252,25 +197,106 @@
             color: #2e7d32;
         }
 
-        /* ---------- Cita / introducción ---------- */
-        .intro {
-            margin-top: 50px;
-            background: linear-gradient(135deg, #005a9c, #0078d4);
-            color: #fff;
-            padding: 30px 35px;
+        /* ---------- Sección Única: Falta de Techado en la Cancha ---------- */
+        .topic-section {
+            background: #fff;
             border-radius: 14px;
-            font-style: italic;
-            box-shadow: 0 6px 20px rgba(0,90,156,0.3);
-            position: relative;
+            box-shadow: 0 4px 16px rgba(0,90,156,0.12);
+            overflow: hidden;
+            margin-bottom: 40px;
+            border-top: 4px solid #0078d4;
         }
 
-        .intro p {
+        .topic-header {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .topic-header img {
+            width: 100%;
+            max-width: 340px;
+            height: 235px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .topic-intro {
+            flex: 1;
+            min-width: 260px;
+            padding: 26px 30px;
+        }
+
+        .topic-tag {
+            display: inline-block;
+            background: #eaf4fb;
+            color: #004080;
+            font-weight: 700;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            margin-bottom: 10px;
+        }
+
+        .topic-intro h2 {
+            color: #004080;
+            margin: 0 0 12px;
+            font-size: 1.45rem;
+            line-height: 1.3;
+        }
+
+        .topic-intro p {
             margin: 0;
+            font-size: 0.98rem;
+        }
+
+        .topic-body {
+            padding: 0 30px 30px;
+        }
+
+        .topic-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .point-card {
+            background: #f8fbfe;
+            border: 1px solid #e1effa;
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+
+        .point-card h3 {
+            margin: 0 0 6px;
+            color: #005a9c;
+            font-size: 1rem;
+        }
+
+        .point-card p {
+            margin: 0;
+            font-size: 0.93rem;
+            color: #444;
+        }
+
+        .solution {
+            margin-top: 22px;
+            padding: 14px 18px;
+            background: #f0f9f1;
+            border-left: 4px solid #4caf50;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.96rem;
+        }
+
+        .solution strong {
+            color: #2e7d32;
         }
 
         /* ---------- Mapa semántico ---------- */
         .mapa {
-            margin-top: 50px;
+            margin-top: 35px;
             background: #fff;
             border-radius: 14px;
             box-shadow: 0 4px 16px rgba(0,90,156,0.12);
@@ -289,30 +315,6 @@
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-        }
-
-        /* ---------- Pie de página ---------- */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #004080;
-            color: #cfe6ff;
-            font-size: 0.9rem;
-        }
-
-        /* ---------- Portada del equipo ---------- */
-        .portada-equipo {
-            display: flex;
-            justify-content: center;
-            padding: 0 16px 40px;
-        }
-
-        .portada-equipo img {
-            width: 100%;
-            max-width: 520px;
-            height: auto;
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0, 64, 128, 0.18);
         }
 
         /* ---------- Escaleta y créditos ---------- */
@@ -336,6 +338,10 @@
             padding: 0 0 18px 18px;
             margin-bottom: 18px;
             border-left: 4px solid #0078d4;
+        }
+
+        .escaleta-item:last-of-type {
+            margin-bottom: 0;
         }
 
         .escaleta-item h3 {
@@ -373,10 +379,9 @@
 
         .roles strong {
             color: #2e7d32;
-            text-transform: capitalize;
         }
 
-        /* ---------- Sección Código QR ---------- */
+        /* ---------- Sección Código QR del Ensayo ---------- */
         .qr-section {
             margin-top: 35px;
             background: #fff;
@@ -417,15 +422,7 @@
             border-radius: 8px;
         }
 
-        /* ---------- Responsivo ---------- */
-        @media (max-width: 640px) {
-            .hero { height: 240px; }
-            .hero-text h1 { font-size: 1.8rem; }
-            .problem img { max-width: 100%; height: 180px; }
-            .escaleta, .qr-section { padding: 24px 20px; }
-            .qr-box img { width: 180px; height: 180px; }
-        }
-        /* ---------- Sección Video de YouTube ---------- */
+        /* ---------- Sección Video de YouTube del Tema ---------- */
         .video-section {
             margin-top: 35px;
             background: #fff;
@@ -481,214 +478,224 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(0, 120, 212, 0.3);
         }
+
+        /* ---------- Cita editorial ---------- */
+        .intro {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #005a9c, #0078d4);
+            color: #fff;
+            padding: 30px 35px;
+            border-radius: 14px;
+            font-style: italic;
+            box-shadow: 0 6px 20px rgba(0,90,156,0.3);
+        }
+
+        .intro p {
+            margin: 0;
+        }
+
+        /* ---------- Pie de página ---------- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #004080;
+            color: #cfe6ff;
+            font-size: 0.9rem;
+        }
+
+        /* ---------- Responsivo ---------- */
+        @media (max-width: 640px) {
+            .hero { height: 240px; }
+            .hero-text h1 { font-size: 1.75rem; }
+            .topic-header img { max-width: 100%; height: 190px; }
+            .topic-intro, .topic-body, .escaleta, .qr-section, .video-section { padding: 22px 20px; }
+            .qr-box img { width: 180px; height: 180px; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Encabezado con imagen decorativa -->
+    <!-- Encabezado editorial -->
     <header class="hero">
-        <img src="images/hero.jpg" alt="Patio de la escuela con estudiantes" />
+        <img src="images/hero.jpg" alt="Patio y cancha del bachillerato con estudiantes" />
         <div class="hero-text">
-            <span class="hero-badge">Voz estudiantil</span>
-            <h1>Nuestro Problema</h1>
-            <p>Cinco carencias urgentes de nuestro plantel y propuestas para resolverlas</p>
+            <span class="hero-badge">Casa Editorial · Edición 01</span>
+            <h1>Falta de Techado en la Cancha</h1>
+            <p>Análisis editorial sobre la radiación solar, las altas temperaturas y la urgencia de un domo en nuestro bachillerato</p>
         </div>
     </header>
 
     <div class="container">
 
-        <!-- Portada del equipo -->
+        <!-- Portada de la casa editorial / equipo -->
         <div class="portada-equipo">
             <img src="images/capibarines.png" alt="Los Capibarines, unidos por Zacachimalpa: Camila Ivania Herrera Rosales, Carlos Garcia Cruz, Santiago Varillas Silva, Eduardo Tototzintle Nieto y Santiago Rodriguez Hernandez" />
         </div>
 
-        <!-- Equipo de producción -->
+        <!-- Equipo editorial -->
         <section class="team">
-            <h2>Casa Productora · Equipo de Trabajo</h2>
-            <p class="team-sub">Cada integrante aportó su talento para construir este proyecto</p>
+            <h2>Casa Editorial · Equipo de Trabajo</h2>
+            <p class="team-sub">Cinco integrantes desarrollando nuestro primer tema editorial sobre la cancha escolar</p>
             <div class="team-grid">
 
                 <div class="member">
                     <span class="avatar">1</span>
                     <h3>Integrante 1</h3>
-                    <span class="rol">Identidad Visual</span>
-                    <p><strong>Responsabilidad:</strong> Digitalización del logotipo oficial, definición de la estética visual y redacción del lema de la casa productora.</p>
-                    <div class="aporte"><strong>Aporte clave:</strong> Su trabajo aportó a la página personalidad y una imagen profesional.</div>
+                    <span class="rol">Identidad Editorial</span>
+                    <p><strong>Responsabilidad:</strong> Digitalización del logotipo oficial, definición de la estética visual y redacción del lema de la casa editorial.</p>
+                    <div class="aporte"><strong>Aporte clave:</strong> Aportó personalidad, coherencia visual y una identidad sólida a la publicación.</div>
                 </div>
 
                 <div class="member">
                     <span class="avatar">2</span>
                     <h3>Integrante 2</h3>
-                    <span class="rol">Redacción e Investigación Documental</span>
-                    <p><strong>Responsabilidad:</strong> Elaboración del ensayo académico, síntesis de las problemáticas escolares y validación de fuentes bajo la norma APA.</p>
-                    <div class="aporte"><strong>Aporte clave:</strong> Dio el sustento teórico y la información necesaria para que los textos sean claros, precisos y formales.</div>
+                    <span class="rol">Redacción y Ensayo Académico</span>
+                    <p><strong>Responsabilidad:</strong> Elaboración del ensayo sobre la falta de techado y altas temperaturas en la cancha, con sustento documental y formato APA.</p>
+                    <div class="aporte"><strong>Aporte clave:</strong> Dio rigor argumentativo y claridad a la postura central del primer tema.</div>
                 </div>
 
                 <div class="member">
                     <span class="avatar">3</span>
                     <h3>Integrante 3</h3>
-                    <span class="rol">Diseño de Información y Recursos Semánticos</span>
-                    <p><strong>Responsabilidad:</strong> Conceptualización, estructura y elaboración gráfica del mapa semántico de problemas y soluciones.</p>
-                    <div class="aporte"><strong>Aporte clave:</strong> Transformó datos en un esquema visual atractivo y comprensible para cualquier lector que visite el sitio.</div>
+                    <span class="rol">Diseño de Información y Mapa Semántico</span>
+                    <p><strong>Responsabilidad:</strong> Conceptualización, estructura y elaboración gráfica del mapa semántico vinculado al tema de la cancha y sus soluciones.</p>
+                    <div class="aporte"><strong>Aporte clave:</strong> Organizó las ideas principales en un recurso visual directo y fácil de consultar.</div>
                 </div>
 
                 <div class="member">
                     <span class="avatar">4</span>
                     <h3>Integrante 4</h3>
-                    <span class="rol">Guion y Planificación Audiovisual</span>
-                    <p><strong>Responsabilidad:</strong> Elaboración de la escaleta técnica para preproducción del cortometraje y asignación de créditos.</p>
-                    <div class="aporte"><strong>Aporte clave:</strong> Aportó el enfoque narrativo y la estructura visual indispensable para proyectar la solución de los problemas a través de medios audiovisuales.</div>
+                    <span class="rol">Guion y Producción Audiovisual</span>
+                    <p><strong>Responsabilidad:</strong> Planificación audiovisual, escaleta y asignación de créditos para el video del tema.</p>
+                    <div class="aporte"><strong>Aporte clave:</strong> Estructuró el mensaje audiovisual para comunicar el problema de forma cercana y clara.</div>
                 </div>
 
                 <div class="member">
                     <span class="avatar">5</span>
                     <h3>Integrante 5</h3>
-                    <span class="rol">Desarrollo, Montaje y Maquetación Web</span>
-                    <p><strong>Responsabilidad:</strong> Estructuración de la plataforma digital, integración de contenidos multimedia y optimización de la navegación.</p>
-                    <div class="aporte"><strong>Aporte clave:</strong> Logró que todos los elementos textuales y visuales estuvieran conectados en una interfaz funcional, accesible y estética.</div>
+                    <span class="rol">Maquetación y Edición Web</span>
+                    <p><strong>Responsabilidad:</strong> Diseño de la página editorial, integración del ensayo vía QR, video de YouTube y navegación responsiva.</p>
+                    <div class="aporte"><strong>Aporte clave:</strong> Reunió los contenidos escritos, gráficos y audiovisuales en una edición web funcional.</div>
                 </div>
 
             </div>
         </section>
 
-        <div class="problem">
-            <img src="images/agua.jpg" alt="Llave de agua goteando sobre una mano con suelo agrietado por la sequía" />
-            <div class="problem-content">
-                <h2><span class="num">1</span> Desabasto de agua potable y saneamiento</h2>
-                <p>La falta constante de agua afecta a toda la comunidad escolar al limitar la higiene de los sanitarios y la limpieza del plantel.</p>
-                <div class="solution"><strong>Propuesta:</strong> mejorar el almacenamiento con cisternas o tinacos y promover el cuidado responsable del recurso.</div>
+        <!-- Sección Única del Tema: Falta de techado en las canchas del bachillerato -->
+        <section class="topic-section">
+            <div class="topic-header">
+                <img src="images/techado.jpg" alt="Vista aérea del edificio del plantel con la cancha escolar sin techado" />
+                <div class="topic-intro">
+                    <span class="topic-tag">Tema Principal · Bachillerato Tecnológico Zacachimalpa BUAP</span>
+                    <h2>El impacto de las altas temperaturas y la falta de techado en la cancha</h2>
+                    <p>En el Bachillerato Tecnológico de Zacachimalpa BUAP, en San Pedro Zacachimalpa, Puebla, la combinación entre las altas temperaturas y la ausencia de techado en la cancha limita el uso seguro y cómodo del espacio para la comunidad estudiantil.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="problem">
-            <img src="images/techado.jpg" alt="Vista aérea del edificio del plantel con la cancha escolar" />
-            <div class="problem-content">
-                <h2><span class="num">2</span> Ausencia de techado ante el sol y altas temperaturas</h2>
-                <p>La falta de domo o sombra en el patio perjudica a los alumnos en sus actividades físicas por la radiación solar directa.</p>
-                <div class="solution"><strong>Propuesta:</strong> instalar techados en las áreas de mayor convivencia escolar.</div>
+            <div class="topic-body">
+                <div class="topic-points">
+                    <div class="point-card">
+                        <h3>Clima y radiación solar</h3>
+                        <p>En San Pedro Zacachimalpa se registran mañanas frescas y tardes cálidas (con máximas promedio de 25 °C a 26 °C en los meses más cálidos y radiación directa), lo que eleva la sensación térmica al aire libre.</p>
+                    </div>
+
+                    <div class="point-card">
+                        <h3>Deporte y convivencia</h3>
+                        <p>La falta de cubierta restringe el aprovechamiento de la cancha en actividades físicas, deportivas y recreativas durante los horarios de mayor exposición solar.</p>
+                    </div>
+
+                    <div class="point-card">
+                        <h3>Fatiga y atención en clase</h3>
+                        <p>La exposición prolongada al calor puede provocar cansancio, dolor de cabeza y menor concentración al regresar a las aulas.</p>
+                    </div>
+
+                    <div class="point-card">
+                        <h3>Gestión comunitaria</h3>
+                        <p>Atender la carencia requiere diagnóstico, gestión ante autoridades y corresponsabilidad entre directivos, docentes, familias y estudiantes.</p>
+                    </div>
+                </div>
+
+                <div class="solution">
+                    <strong>Propuesta editorial:</strong> Impulsar la gestión y construcción de un techado o domo ventilado sobre la cancha, complementado con sombra natural (árboles y áreas verdes), hidratación constante y planeación de horarios en horas de menor radiación.
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="problem">
-            <img src="images/descanso.jpg" alt="Estudiantes conviviendo dentro del salón de clases" />
-            <div class="problem-content">
-                <h2><span class="num">3</span> Insuficiencia de áreas de descanso y convivencia</h2>
-                <p>Afecta a los estudiantes durante los recesos, ya que carecen de lugares dignos para sentarse a comer o convivir.</p>
-                <div class="solution"><strong>Propuesta:</strong> gestionar e instalar mesas, bancas y zonas limpias mediante el apoyo de autoridades y alumnos.</div>
-            </div>
-        </div>
-
-        <div class="problem">
-            <img src="images/calor.jpg" alt="Vegetación seca y basura en una zona exterior del plantel" />
-            <div class="problem-content">
-                <h2><span class="num">4</span> Exposición prolongada al calor y fatiga térmica</h2>
-                <p>Las altas temperaturas en el aula afectan la salud y concentración de los alumnos, generando cansancio y dolores de cabeza.</p>
-                <div class="solution"><strong>Propuesta:</strong> sembrar árboles para generar sombra natural y optimizar la ventilación de los espacios.</div>
-            </div>
-        </div>
-
-        <div class="problem">
-            <img src="images/colaborativo.jpg" alt="Estudiantes conviviendo en las mesas del patio escolar" />
-            <div class="problem-content">
-                <h2><span class="num">5</span> Falta de espacios para actividades escolares</h2>
-                <p>Limita el desarrollo académico y en equipo de la comunidad estudiantil al depender únicamente del pupitre tradicional.</p>
-                <div class="solution"><strong>Propuesta:</strong> crear zonas escolares para trabajos colaborativos, al igual que talleres.</div>
-            </div>
-        </div>
-
+        <!-- Mapa semántico -->
         <div class="mapa">
-            <h2>Mapa semántico · Problemas y soluciones</h2>
-            <img src="images/mapa.png" alt="Mapa semántico con las cinco problemáticas del bachillerato y sus soluciones" />
+            <h2>Mapa semántico · Problemática y soluciones</h2>
+            <img src="images/mapa.png" alt="Mapa semántico del proyecto editorial sobre la cancha y soluciones" />
         </div>
 
         <!-- Escaleta audiovisual y créditos -->
         <section class="escaleta">
-            <h2>Escaleta audiovisual</h2>
+            <h2>Escaleta audiovisual del tema</h2>
 
             <div class="escaleta-item">
-                <h3>Introducción <span>0:00-0:30</span></h3>
-                <p>Se presenta la situación general del bachillerato y se plantea que existen problemas de infraestructura y servicios que afectan a los estudiantes.</p>
+                <h3>Introducción <span>0:00-0:45</span></h3>
+                <p>Presentación del tema editorial y del contexto de la cancha del bachillerato ante la falta de techado.</p>
             </div>
 
             <div class="escaleta-item">
-                <h3>Problema 1: Falta de agua <span>0:30-1:20</span></h3>
-                <p>Se muestra o explica la dificultad que provoca la falta de agua en sanitarios y limpieza, se plantea mejorar el almacenamiento y fomentar el uso responsable.</p>
+                <h3>Exposición solar y calor en la cancha <span>0:45-2:15</span></h3>
+                <p>Análisis de cómo las altas temperaturas y el sol directo afectan las actividades físicas, recreativas y el bienestar estudiantil.</p>
             </div>
 
             <div class="escaleta-item">
-                <h3>Problema 2: Falta de techado <span>1:20-2:10</span></h3>
-                <p>Se aborda la exposición directa al sol y las altas temperaturas en el patio, se propone instalar un domo o estructuras que proporcionen sombra.</p>
+                <h3>Repercusiones en el rendimiento y la salud <span>2:15-3:45</span></h3>
+                <p>Relación entre el desgaste térmico, la fatiga o dolor de cabeza y la dificultad para mantener la atención escolar.</p>
             </div>
 
             <div class="escaleta-item">
-                <h3>Problema 3: Falta de espacios de descanso <span>2:10-3:00</span></h3>
-                <p>Se explica que hacen falta lugares cómodos para sentarse, comer y convivir durante los recesos, se propone colocar bancas, mesas y acondicionar áreas comunes.</p>
-            </div>
-
-            <div class="escaleta-item">
-                <h3>Problema 4: Altas temperaturas <span>3:00-3:50</span></h3>
-                <p>Se muestra cómo el calor puede provocar cansancio, dolor de cabeza y dificultades para concentrarse, se plantean árboles, áreas verdes y mejor ventilación.</p>
-            </div>
-
-            <div class="escaleta-item">
-                <h3>Problema 5: Falta de espacios para actividades <span>3:50-4:40</span></h3>
-                <p>Se explica que existen pocas áreas destinadas a trabajos en equipo y actividades recreativas, se propone aprovechar y reorganizar espacios que estén en desuso.</p>
-            </div>
-
-            <div class="escaleta-item">
-                <h3>Soluciones <span>4:40-5:20</span></h3>
-                <p>Se reúnen las propuestas principales: mejorar el suministro de agua, instalar techados, acondicionar áreas de descanso, crear áreas verdes y aprovechar espacios disponibles.</p>
-            </div>
-
-            <div class="escaleta-item">
-                <h3>Cierre <span>5:20-5:50</span></h3>
-                <p>Se plantea que mejorar estas condiciones requiere la participación de autoridades, docentes y estudiantes para construir un entorno escolar más digno y seguro.</p>
+                <h3>Propuestas y cierre editorial <span>3:45-5:00</span></h3>
+                <p>Planteamiento de soluciones de infraestructura, sombra e hidratación, junto con la participación de la comunidad escolar.</p>
             </div>
 
             <div class="roles">
-                <p><strong>Carlos:</strong> Narrador y coordinador general</p>
-                <p><strong>Ivania:</strong> Encargada e investigadora de soluciones ambientales</p>
-                <p><strong>Eduardo:</strong> Encargado e investigador de problemas de agua</p>
-                <p><strong>Santiago Rodríguez:</strong> Investigador y encargado de infraestructura</p>
-                <p><strong>Santiago Varillas:</strong> Investigador y encargada de espacios comunes</p>
+                <p><strong>Carlos García Cruz:</strong> Narrador y coordinador general</p>
+                <p><strong>Camila Ivania Herrera Rosales:</strong> Investigadora de soluciones ambientales y sombra</p>
+                <p><strong>Eduardo Tototzintle Nieto:</strong> Investigación y apoyo documental</p>
+                <p><strong>Santiago Rodríguez Hernández:</strong> Investigación y gestión de infraestructura</p>
+                <p><strong>Santiago Varillas Silva:</strong> Investigación y organización de espacios escolares</p>
             </div>
         </section>
 
-        <!-- Código QR -->
+        <!-- Código QR del Ensayo -->
         <section class="qr-section">
-            <h2>Material Audiovisual</h2>
-            <p>Escanea el código QR con tu dispositivo para acceder al contenido completo del proyecto</p>
+            <h2>Código QR del Ensayo</h2>
+            <p>Escanea este código QR para leer el ensayo completo sobre la falta de techado y las altas temperaturas en la cancha</p>
             <div class="qr-box">
-                <img src="images/qr.png" alt="Código QR del material audiovisual del proyecto" />
+                <img src="images/qr.png" alt="Código QR para acceder al ensayo sobre la falta de techado en la cancha" />
             </div>
         </section>
-        <!-- Video de YouTube -->
+
+        <!-- Video de YouTube del Tema -->
         <section class="video-section">
-            <h2>Cortometraje / Video del Proyecto</h2>
-            <p>Mira nuestro video completo sobre las problemáticas del plantel y nuestras propuestas</p>
+            <h2>Video en YouTube · Falta de Techado en la Cancha</h2>
+            <p>Consulta el video correspondiente a este primer tema de nuestra casa editorial</p>
 
             <div class="video-wrapper">
                 <iframe
-                    src="https://youtu.be/TWciIE2rmns?si=WApdKD-ekg0aNAMf"
-                    title="Video del proyecto escolar en YouTube"
+                    src="https://www.youtube.com/embed/TWciIE2rmns"
+                    title="Video sobre la falta de techado en la cancha del bachillerato en YouTube"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
             </div>
 
             <a class="youtube-btn" href="https://youtu.be/TWciIE2rmns?si=WApdKD-ekg0aNAMf" target="_blank" rel="noopener noreferrer">
-                Ver enlace directo en YouTube
+                Ver video en YouTube
             </a>
         </section>
 
         <div class="intro">
-            <p>La escuela es el espacio donde convivimos, aprendemos y nos formamos cada día. Sin embargo, en nuestro bachillerato enfrentamos carencias básicas de infraestructura y servicios que impactan directamente en nuestra salud, comodidad y rendimiento académico. Es por eso que presentamos cinco problemáticas urgentes del plantel junto con propuestas viables para transformar nuestro entorno en un lugar digno y seguro.</p>
+            <p>Garantizar un entorno escolar digno y seguro exige atender de fondo las carencias que limitan nuestra salud y convivencia diaria. Con esta primera entrega editorial buscamos abrir el diálogo y sumar esfuerzos para que la cancha del bachillerato cuente con condiciones adecuadas frente al sol y el calor.</p>
         </div>
 
     </div>
 
     <footer>
-        Proyecto estudiantil · Transformemos nuestro plantel juntos
+        Casa Editorial Estudiantil · Edición 01: Falta de Techado en la Cancha
     </footer>
 
 </body>
